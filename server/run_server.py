@@ -48,3 +48,6 @@ def parse_and_run():
         # start consoles server
         a = ConsoleServerApp(args, DB_PATH)
         a.main()
+
+if __name__ == '__main__':
+    parse_and_run()
