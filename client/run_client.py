@@ -1,7 +1,6 @@
 """файл для запуска клиентского приложения в цикле"""
 from argparse import ArgumentParser
-from asyncio import ensure_future, get_event_loop, run, create_task, \
-    set_event_loop
+from asyncio import ensure_future, get_event_loop, run, create_task, set_event_loop
 from sys import argv
 
 from PyQt5.QtWidgets import QApplication, QDialog

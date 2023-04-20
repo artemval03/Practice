@@ -1,10 +1,10 @@
 """файл для запуска серверного приложения в цикле"""
 import argparse
 import asyncio
-from sys import argv
+import sys
 
-from PyQt5.QtWidgets import QApplication
-from PyQt5.QtCore import QEventLoop
+from PyQt5 import Qt
+#from PyQt5.QtCore import QEventLoop
 from quamash import QEventLoop  # asyncio works fine with pyqt5 loop
 
 from server.server_config import DB_PATH, PORT
@@ -59,7 +59,7 @@ class GuiServerApp:
         self.ins = ChatServerProtocol(self.db_path, connections, users)
 
         # GUI
-        app = QApplication(argv)
+        app = Qt.QApplication(sys.argv)
         loop = QEventLoop(app)
         asyncio.set_event_loop(loop)  # NEW must set the event loop
 
